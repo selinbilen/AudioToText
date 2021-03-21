@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechToText" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9y-6O-SMm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SPEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-93-od6">
+                                        <rect key="frame" x="168" y="52" width="78" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="8M5-Yv-123"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51204014689999999" green="0.62720612050000002" blue="0.56741266059999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="AdK-93-od6" firstAttribute="centerX" secondItem="I9y-6O-SMm" secondAttribute="centerX" id="IEe-8q-GTg"/>
+                                    <constraint firstAttribute="width" constant="414" id="cpO-wp-vEm"/>
+                                    <constraint firstItem="AdK-93-od6" firstAttribute="top" secondItem="I9y-6O-SMm" secondAttribute="top" constant="38" id="eop-2C-RPy"/>
+                                    <constraint firstAttribute="height" constant="124" id="n9h-Uw-7AH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-0W-Cq9" customClass="RecordButton" customModule="SpeechToText" customModuleProvider="target">
+                                <rect key="frame" x="162" y="772" width="90" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <state key="normal" image="record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="RecordBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qg8-XK-4gl"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap the mic button below and start speaking" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjT-Gi-l56">
+                                <rect key="frame" x="20" y="144" width="374" height="608"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.64625880879999997" green="0.79161269430000003" blue="0.71614585760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-sE-ZnK">
+                                <rect key="frame" x="162" y="772" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2Cq-hL-A0g"/>
+                                    <constraint firstAttribute="width" constant="90" id="L8F-Jv-EJq"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KjT-Gi-l56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="374-qF-qbY"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="trailing" secondItem="Nrp-sE-ZnK" secondAttribute="trailing" id="7uv-QC-yc5"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="leading" secondItem="Nrp-sE-ZnK" secondAttribute="leading" id="B5m-fW-m2c"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="centerX" secondItem="I9y-6O-SMm" secondAttribute="centerX" id="KKr-pM-Pj6"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="bottom" secondItem="Nrp-sE-ZnK" secondAttribute="bottom" id="Nia-8o-MFj"/>
+                            <constraint firstItem="KjT-Gi-l56" firstAttribute="top" secondItem="I9y-6O-SMm" secondAttribute="bottom" constant="20" id="PaY-8d-5Nm"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Sdp-Yu-9zM"/>
+                            <constraint firstItem="I9y-6O-SMm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UHA-Vl-V23"/>
+                            <constraint firstItem="KjT-Gi-l56" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V4z-N2-eMd"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="top" secondItem="Nrp-sE-ZnK" secondAttribute="top" id="W4b-mn-hCL"/>
+                            <constraint firstItem="I9y-6O-SMm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="YMf-aD-jHj"/>
+                            <constraint firstItem="KjT-Gi-l56" firstAttribute="top" secondItem="I9y-6O-SMm" secondAttribute="bottom" constant="20" id="cBI-cP-Yr0"/>
+                            <constraint firstItem="I9y-6O-SMm" firstAttribute="centerX" secondItem="KjT-Gi-l56" secondAttribute="centerX" id="dTY-2u-GDM"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="centerX" secondItem="KjT-Gi-l56" secondAttribute="centerX" id="kId-Vx-rMO"/>
+                            <constraint firstItem="KjT-Gi-l56" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mZE-42-sxh"/>
+                            <constraint firstItem="uDc-0W-Cq9" firstAttribute="top" secondItem="KjT-Gi-l56" secondAttribute="bottom" constant="20" id="mdW-xb-4NQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TextView" destination="KjT-Gi-l56" id="SlU-r8-L9h"/>
+                        <outlet property="activitySpinner" destination="Nrp-sE-ZnK" id="fSr-bs-tNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="79.6875"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="uDc-0W-Cq9">
+            <size key="intrinsicContentSize" width="256" height="256"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="record" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
